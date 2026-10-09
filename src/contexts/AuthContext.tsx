@@ -51,6 +51,7 @@ function extractAuthUser(profile: Profile): AuthUser | null {
     id,
     email,
     role_name: typeof profile.role_name === 'string' ? profile.role_name : 'client',
+    permissions: [],
   };
 }
 

@@ -150,8 +150,8 @@ async function parseHotelError(response: Response, endpoint: string): Promise<Ho
   return new HotelApiError(
     code,
     status,
-    detailOverride || body?.detail || body?.title || `Error ${status}`,
-    body?.trace_id || undefined,
+    detailOverride || (body?.detail as string) || (body?.title as string) || `Error ${status}`,
+    (body?.trace_id as string) || undefined,
     retryAfterHeader ? parseInt(retryAfterHeader, 10) : undefined,
   );
 }

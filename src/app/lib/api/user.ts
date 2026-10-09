@@ -249,6 +249,7 @@ export interface MeResponse {
     id: string;
     email: string;
     role_name: string;
+    permissions?: string[];
   };
 }
 
