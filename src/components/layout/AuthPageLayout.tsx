@@ -12,6 +12,7 @@ export interface AuthPageLayoutProps {
   sideTitle?: string;
   sideSubtitle?: string;
   sideImageSrc?: string;
+  backgroundSrc?: string;
   backHref?: string;
 }
 
@@ -30,12 +31,18 @@ export default function AuthPageLayout({
   sideTitle,
   sideSubtitle,
   sideImageSrc = "/assets/loginRegister/login-side.png",
+  // Imagen de fondo de toda la pagina. Cambia esta ruta por la imagen que quieras (carpeta public/).
+  backgroundSrc = "/images/destinations/francia.jpg",
   backHref,
 }: AuthPageLayoutProps) {
   return (
-    <main className="relative min-h-screen w-full flex items-center justify-center p-4 sm:p-6 bg-gradient-to-b from-neutral-50 via-white to-neutral-50">
-      {/* Subtle top decorative bar */}
-      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-neutral-200 to-transparent" />
+    <main className="relative min-h-screen w-full flex items-center justify-center p-4 sm:p-6 bg-neutral-900">
+      {/* Fondo: imagen a pantalla completa + capa oscura para que la tarjeta destaque */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${backgroundSrc})` }}
+      />
+      <div className="absolute inset-0 bg-black/45 backdrop-blur-[2px]" />
 
       {/* CENTERED CARD */}
       <motion.div

@@ -107,12 +107,12 @@ export default function LandingPage() {
         </div>
 
         {/* RIGHT — IMAGE CARDS + CONTROLS (enlarged area) */}
-        <div className="lg:w-[680px] xl:w-[760px] flex flex-col justify-end px-6 pb-8 lg:pb-14 lg:pr-20 xl:pr-32 gap-4">
+        <div className="lg:w-[640px] xl:w-[860px] 2xl:w-[1000px] flex flex-col justify-end px-6 pb-8 lg:pb-14 lg:pr-12 xl:pr-16 gap-5">
           {/* DESTINATION CARDS ROW */}
           <div className="w-full overflow-x-auto hide-scrollbar lg:overflow-hidden">
             <div className="flex gap-4 lg:gap-5 lg:justify-end">
               <AnimatePresence mode="sync">
-                {visibleCards.slice(0, 4).map((destination) => (
+                {visibleCards.slice(0, 3).map((destination) => (
                   <DestinationCard
                     key={destination.id}
                     destination={destination}
@@ -128,15 +128,15 @@ export default function LandingPage() {
             <div className="flex items-center gap-2">
               <button
                 onClick={handlePrev}
-                className="w-11 h-11 lg:w-12 lg:h-12 flex items-center justify-center rounded-full bg-white/15 hover:bg-white/25 backdrop-blur-sm border border-white/20 transition-colors"
+                className="w-12 h-12 lg:w-14 lg:h-14 2xl:w-16 2xl:h-16 flex items-center justify-center rounded-full bg-white/25 hover:bg-white/40 backdrop-blur-sm border border-white/40 transition-colors"
               >
-                <ChevronLeft className="w-5 h-5 text-white" />
+                <ChevronLeft className="w-6 h-6 2xl:w-7 2xl:h-7 text-white" />
               </button>
               <button
                 onClick={handleNext}
-                className="w-11 h-11 lg:w-12 lg:h-12 flex items-center justify-center rounded-full bg-white/15 hover:bg-white/25 backdrop-blur-sm border border-white/20 transition-colors"
+                className="w-12 h-12 lg:w-14 lg:h-14 2xl:w-16 2xl:h-16 flex items-center justify-center rounded-full bg-white/25 hover:bg-white/40 backdrop-blur-sm border border-white/40 transition-colors"
               >
-                <ChevronRight className="w-5 h-5 text-white" />
+                <ChevronRight className="w-6 h-6 2xl:w-7 2xl:h-7 text-white" />
               </button>
             </div>
 
@@ -150,8 +150,8 @@ export default function LandingPage() {
                   transition={{ duration: 0.5, ease: [0.4, 0, 0.2, 1] }}
                 />
               </div>
-              <div className="w-9 h-9 lg:w-10 lg:h-10 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 flex items-center justify-center shrink-0">
-                <span className="text-white text-xs font-semibold tabular-nums">
+              <div className="w-11 h-11 lg:w-12 lg:h-12 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 flex items-center justify-center shrink-0">
+                <span className="text-white text-sm font-semibold tabular-nums">
                   {currentId}
                 </span>
               </div>
