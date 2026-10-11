@@ -1,11 +1,11 @@
 {
-  "name": "proyecto-next",
+  "name": "proactrip-frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "bun --bun next dev --turbopack",
-    "build": "bun --bun next build",
-    "start": "bun --bun next start",
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
     "lint": "eslint",
     "typecheck": "tsc --noEmit"
   },
