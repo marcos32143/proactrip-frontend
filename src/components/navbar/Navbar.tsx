@@ -101,7 +101,6 @@ export default function Navbar() {
     if (!environment?.location?.state) return;
     /* eslint-disable react-hooks/set-state-in-effect -- one-time pre-fill from env data */
     setHotelDest((prev) => prev || environment.location.state);
-    setFlightOrigin((prev) => prev || environment.location.state);
     /* eslint-enable react-hooks/set-state-in-effect */
   }, [environment?.location?.state]);
 

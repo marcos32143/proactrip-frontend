@@ -55,7 +55,7 @@ export default function ProfileDropdown({
       <MenuItems
         anchor={{ to: "bottom end", gap: 8 }}
         transition
-        className="w-[280px] bg-white rounded-2xl shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1)] border border-[#E5E7EB] p-2 z-50 origin-top-right transition duration-200 ease-out data-[closed]:scale-95 data-[closed]:opacity-0"
+        className="w-[280px] bg-white rounded-2xl shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1)] border border-[#E5E7EB] p-2 z-[1000] origin-top-right transition duration-200 ease-out data-[closed]:scale-95 data-[closed]:opacity-0"
       >
         {isLoading ? (
           <div className="flex items-center gap-3 px-3 py-4">

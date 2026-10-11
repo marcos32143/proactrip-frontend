@@ -48,7 +48,21 @@ export default function BusquedaAIPage() {
           }),
         }}
       />
-      <BusquedaAIClientWrapper />
+            {process.env.NEXT_PUBLIC_AI_ENABLED === 'false' ? (
+        <main className="flex min-h-[60vh] items-center justify-center px-6">
+          <div className="max-w-md text-center">
+            <h1 className="text-xl font-semibold">
+              Búsqueda con IA no disponible en esta demo
+            </h1>
+            <p className="mt-2 text-sm text-gray-500">
+              Esta función usa una API de pago que ahora mismo no está activa.
+              El resto de ProacTrip (hoteles, vuelos, mapa y clima) funciona con normalidad.
+            </p>
+          </div>
+        </main>
+      ) : (
+        <BusquedaAIClientWrapper />
+      )}
     </>
   );
 }
