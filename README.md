@@ -121,7 +121,7 @@ Navegador  ──►  Next.js (localhost:3000)
 ### Pasos
 
 ```bash
-git clone https://github.com/marcos32143/proactrip-frontend.git
+git clone https://github.com/soymarcoscasas/proactrip-frontend.git
 cd proactrip-frontend
 npm install
 cp .env.example .env.local     # en Windows CMD: copy .env.example .env.local
