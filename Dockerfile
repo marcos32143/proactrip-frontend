@@ -1,4 +1,0 @@
-FROM oven/bun:1
-WORKDIR /app
-COPY . .
-EXPOSE 3000

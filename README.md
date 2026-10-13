@@ -163,4 +163,4 @@ Pensado para Vercel. En producción hay que definir `NEXT_PUBLIC_API_URL` con la
 ## Créditos
 
 - **Frontend:** Marcos Casas.
-- **Backend:** Marco Aurelio, en [ProacTrip/Backend](https://github.com/ProacTrip/Backend).
+- **Backend:** Marco Antonio ([@soyAurelio](https://github.com/soyAurelio)), en [ProacTrip/Backend](https://github.com/ProacTrip/Backend).
