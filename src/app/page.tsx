@@ -58,6 +58,7 @@ export default function LandingPage() {
             src={backgroundDestination.image}
             alt={backgroundDestination.name}
             fill
+            sizes="100vw"
             className="object-cover"
             priority
           />

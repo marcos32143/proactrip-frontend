@@ -1,5 +1,5 @@
 // app/admin/layout.tsx
-// Layout protegido: middleware ya maneja la redirección por falta de auth.
+// Layout protegido: el proxy (src/proxy.ts) ya maneja la redirección por falta de auth.
 // Acá solo validamos el permiso users:read según DASHBOARD_API.md.
 
 'use client';

@@ -96,6 +96,7 @@ export default function BookingSummary({ data }: BookingSummaryProps) {
               src={data.image}
               alt={data.item_name}
               fill
+              sizes="(max-width: 1024px) 100vw, 33vw"
               className="object-cover"
             />
           </div>

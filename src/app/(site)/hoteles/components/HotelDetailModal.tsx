@@ -221,6 +221,7 @@ export default function HotelDetailModal({ hotel, searchParams, onClose }: Hotel
                 src={displayData.images[currentImageIndex]}
                 alt={`${hotel.name} - foto ${currentImageIndex + 1}`}
                 fill
+                sizes="(max-width: 1024px) 100vw, 896px"
                 unoptimized
                 className="object-cover"
                 onError={() => setGalleryError(true)}
@@ -259,7 +260,7 @@ export default function HotelDetailModal({ hotel, searchParams, onClose }: Hotel
                     <Building2 className="w-3 h-3 text-white/50" />
                   </div>
                 ) : (
-                  <Image src={img} alt="" fill unoptimized className="object-cover" onError={() => setThumbErrors(prev => new Set(prev).add(idx))} />
+                  <Image src={img} alt="" fill sizes="64px" unoptimized className="object-cover" onError={() => setThumbErrors(prev => new Set(prev).add(idx))} />
                 )}
               </button>
             ))}
