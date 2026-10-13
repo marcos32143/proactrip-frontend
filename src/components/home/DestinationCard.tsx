@@ -24,6 +24,7 @@ export default function DestinationCard({ destination, onSelect }: DestinationCa
         src={destination.image}
         alt={destination.name}
         fill
+        sizes="(min-width: 1536px) 288px, (min-width: 1280px) 240px, (min-width: 1024px) 176px, (min-width: 640px) 208px, 176px"
         className="object-cover transition-transform duration-500 group-hover:scale-105"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />

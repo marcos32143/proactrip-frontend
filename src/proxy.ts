@@ -25,7 +25,7 @@ const AUTH_ROUTES = [
   "/auth/resend-verification",
 ];
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const accessToken =
     request.cookies.get("__Secure-access_token")?.value ||

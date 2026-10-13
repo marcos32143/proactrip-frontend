@@ -81,7 +81,7 @@ src/
 ├── components/        # Componentes por dominio: navbar, home, auth, admin, ui, shared
 ├── contexts/          # Sesión y moneda
 ├── hooks/             # Hooks de TanStack Query (perfil, documentos, SSE...)
-└── middleware.ts      # Protege rutas privadas según las cookies de sesión
+└── proxy.ts           # Protege rutas privadas según las cookies de sesión
 public/                # Imágenes, animaciones y recursos estáticos
 docs/screenshots/      # Capturas usadas en este README
 ```
@@ -105,7 +105,7 @@ Navegador  ──►  Next.js (localhost:3000)
 ```
 
 - **Sesión:** cookies `HttpOnly` con tokens PASETO. El frontend nunca ve ni guarda los tokens; el navegador los envía solo.
-- **Rutas privadas:** `middleware.ts` redirige a `/auth/login` si no hay sesión en `/perfil`, `/documentos`, `/favoritos`, `/compras`, `/checkout`, `/confirmacion` y `/admin`. La autorización real la decide el backend.
+- **Rutas privadas:** `proxy.ts` redirige a `/auth/login` si no hay sesión en `/perfil`, `/documentos`, `/favoritos`, `/compras`, `/checkout`, `/confirmacion` y `/admin`. La autorización real la decide el backend.
 - **Errores:** el cliente de la API traduce las respuestas de error del backend (RFC 9457) a mensajes en español y avisa cuando se supera el límite de peticiones.
 - **Búsquedas públicas:** vuelos, hoteles y búsqueda con IA no exigen iniciar sesión.
 

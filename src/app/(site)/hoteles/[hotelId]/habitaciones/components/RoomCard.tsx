@@ -41,6 +41,7 @@ export default function RoomCard({ room, onSelect }: RoomCardProps) {
               src={room.images[currentImage]}
               alt={room.name}
               fill
+              sizes="(max-width: 640px) 40vw, 25vw"
               unoptimized
               className="object-cover"
             />
